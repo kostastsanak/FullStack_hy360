@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Employee</title>
+<link href="../styles/employeepage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="nav-wrapper">
+		<p class="message profile">
+			<a href="#"> <image height="50" src="../images/person.png" /></a>
+		</p>
+		<div class="right-side">
+			<div class="nav-link-wrapper">
+				<a href="employeechange.jsp" type="changevigil" name="changevigil">Change Vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="employeevigil.jsp" type="vigil" name="vigil">vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="../login/login.jsp" type="logout" name="logout">log out</a>
+			</div>
+		</div>
+	</div>
+	<p>
+	<div class="login-page">
+		<div class="form">
+			<form class="home-form" action="../UpdatePinfo" method="POST">
+				<div class="form-group">
+					<div class="appointments">
+						<h3>Appointments</h3>
+						<table id="patient_table">
+							<tr>
+								<th>PATIENT NAME</th>
+								<th>AMKA</th>
+								<th>DATE</th>
+							</tr>
+						</table>
+						<h4>Change appointment</h4>
+						<select name="patient" id="patient_change">
+
+						</select>
+						<h4>New Date</h4>
+						<div class="date">
+							<select name="day" id="day">
+								<option value="">--Day--</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select> <select name="month" id="month">
+								<option value="">--Month--</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select> <select name="time" id="time">
+								<option value="">--time--</option>
+								<option value="8">8:00</option>
+								<option value="9">9:00</option>
+								<option value="10">10:00</option>
+								<option value="11">11:00</option>
+								<option value="12">12:00</option>
+								<option value="13">13:00</option>
+								<option value="14">14:00</option>
+								<option value="15">15:00</option>
+								<option value="16">16:00</option>
+								<option value="17">17:00</option>
+								<option value="18">18:00</option>
+								<option value="19">19:00</option>
+								<option value="20">20:00</option>
+							</select>
+						</div>
+					</div>
+					<button>Change</button>
+				</div>
+			</form>
+			<form class="profile-form" action="../UpdatePinfo" method="POST">
+				<div class="form-group">
+					<table>
+						<tr>
+							<td>Fullname: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show1()">Change</button>
+							</td>
+						</tr>
+						<tr id="txt1">
+							<td><input type="text" name="change_name"
+								placeholder="Enter new Fullname"></td>
+							<td>
+								<button>enter</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Password: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show2()">Change</button>
+							</td>
+
+						</tr>
+						<tr id="txt2">
+							<td><input class="txt" type="password"
+								name="change_password" placeholder="Enter new Password">
+							</td>
+							<td><button>enter</button></td>
+						</tr>
+
+						<tr>
+							<td>Email: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show3()">Change</button>
+							</td>
+						<tr id="txt3">
+							<td><input class="txt" type="text" name="change_email"
+								placeholder="Enter new Email"></td>
+							<td><button>enter</button></td>
+						</tr>
+
+						</tr>
+						<tr>
+							<td>Phone Number: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show4()">Change</button>
+							</td>
+						<tr id="txt4">
+							<td><input type="text" name="change_phone"
+								placeholder="Enter new Phone Number"></td>
+							<td><button>enter</button></td>
+						</tr>
+
+					</table>
+				</div>
+				<p class="message">
+					If you dont want change something <a href="#"> RETURN </a>
+				</p>
+			</form>
+		</div>
+	</div>
+	</p>
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+            $(document).ready(function(){
+                $.getJSON("PatientDate.json",function(data){
+                    var doctor_data='';
+                    var i=0;
+                    $.each(data[2].data,function(key,value){
+                        doctor_data+='<tr>';
+                        doctor_data+='<td>'+ data[2].data[i].name+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].amka+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].phone+ '</td>';
+                        doctor_data+='</tr>';
+                        i++;
+                    });
+
+                    $('#patient_table').append(doctor_data);
+                });
+            });
+        </script>
+        <script type="text/javascript">
+		var $select = $('#patient_change');
+		$.getJSON("PatientDate.json", function(data) {
+			$select.html('');
+			$select.append('<option id=""> --AMKA--</option>')
+			for (var i = 0; i < data[2].data.length; i++) {
+				$select.append('<option id="'+data[2].data[i].amka+ '">'
+						+ data[2].data[i].amka + '</option>')
+			}
+		});
+	</script>
+</body>
+</html>

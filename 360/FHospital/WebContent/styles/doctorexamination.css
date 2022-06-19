@@ -1,0 +1,107 @@
+body {
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/pic1.jpg");
+	height: 100vh;
+	background-size:cover;
+	background-position: center;
+	margin:0px;
+	padding: 0px;
+}
+.nav-wrapper{
+	align-items: center;
+	justify-content: flex-end;
+	display: flex;
+	background: rgba(35,32,227,0.7);
+	max-width: 100%;
+	padding: 0px 20px;
+}
+.right-side{
+	display: flex;
+}
+.nav-wrapper > .right-side > div{
+	text-transform: uppercase;
+}
+.nav-link-wrapper{
+	font-weight: 500;
+	font-size: 16px;
+	padding: 20px 10px;
+	height: 22px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5;
+}
+.nav-link-wrapper a{
+	padding: 10px 20px;
+	border-radius: 7px;
+	color:white;
+	text-decoration: none;
+	transition:color 0.5;
+}
+.nav-link-wrapper a:hover{
+	background-color:rgba(62,137,197,1);
+	color:white;
+}
+.profile{
+	margin-right: auto;
+}
+
+//-------
+.login-page{
+	width: 360px;
+	padding: 20% 0 0;
+	margin: auto;
+}
+
+.form{
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	background: rgba(59,90,216,0.7);
+	max-width: 360px;
+	margin:5% auto 0px auto;
+	padding: 45px;
+
+}
+h4,h5{
+	color: white;
+}
+.form select{
+	font-family:arial;
+	outline: 1;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 10px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+.radio-inline{
+	font-family:arial;
+	outline: 1;
+	background: #f2f2f2;
+	width: 100%;
+	margin: 0 0 15px;
+	padding: 10px;
+	font-size: 14px;
+	color:black;
+	background: white;
+}
+.form button{
+	font-family:arial;
+	text-transform:uppercase; //caps
+	outline:0;
+	background: green;
+	color :white;
+	width:100%;
+	border: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+.form-group{
+	position: relative;
+	margin:0 auto 15px;
+}
+.date{
+	display: flex;
+	
+}

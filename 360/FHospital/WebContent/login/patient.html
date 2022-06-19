@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Patient</title>
+<link href="../styles/patient.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="nav-wrapper">
+		<div class="right-side">
+			<div class="nav-link-wrapper">
+				<a href="../index.jsp" type="home" name="home">home</a>
+			</div>
+			<div class ="nav-link-wrapper">
+					<a  href="covid.jsp" type="covid" name="covid">covid</a>
+				</div>
+			<div class="nav-link-wrapper">
+				<a href="doctorprogram.jsp" type="vigil" name="vigil">Vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="login.jsp" type="lognin" name="login">log in</a>
+			</div>
+		</div>
+	</div>
+	<p>
+	<div class="login-page">
+		<div class="form">
+			<form class="patient-form" action="../Register" method="POST">
+				<div class="form-group">
+					<input type="text" id="name" name="name" placeholder="Full Name">
+					<input type="password" id="password" name="password"
+						placeholder="Password"> <input type="text" id="email"
+						name="email" placeholder="Email"> <input type="text"
+						id="phone" name="phone" placeholder="Phone Number"> <input
+						type="text" id="amka" name="amka" placeholder="AMKA"> <input
+						type="text" id="address" name="address" placeholder="Address">
+					<input type="text" id="agency" name="agency"
+						placeholder="Insurance Agency"> <input type="text"
+						id="diseases" name="diseases"
+						placeholder="Chronic Diseases (if exist)">
+				</div>
+				<button>Create</button>
+				<p class="message">
+					Do you have account?<a href="login.jsp">Log in </a>
+				</p>
+			</form>
+		</div>
+	</div>
+	</p>
+
+</body>
+</html>

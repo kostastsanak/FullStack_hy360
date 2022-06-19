@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Personnel</title>
+<link href="../styles/personnel.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="nav-wrapper">
+		<div class="right-side">
+			<div class="nav-link-wrapper">
+				<a href="../index.jsp" type="home" name="home">home</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="covid.jsp" type="covid" name="covid">covid</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="doctorprogram.jsp" type="vigil" name="vigil">Vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="login.jsp" type="lognin" name="login">log in</a>
+			</div>
+		</div>
+	</div>
+	<p>
+	<div class="login-page">
+		<div class="form">
+			<form class="doctor-form" action="../Register" method="POST">
+				<div class="form-group">
+					<label for="doct" class="radio-inline"><input onclick="show_hide()" type="radio" value="d" name="speciality"id="doct" />Doctor
+					</label>
+					<label for="pat" class="radio-inline"><input onclick="show_hide2()" type="radio" value="n" name="speciality" id="nurse" />Nurse
+					</label>
+					<label for="pat" class="radio-inline"><input onclick="show_hide2()" type="radio" value="e" name="speciality" id="employee" />Employee
+					</label>
+				</div>
+				<input type="text" id="name" name="name" placeholder="Full Name">
+				<input type="password" id="password" name="password" placeholder="Password">
+				<input type="text" id="email" name="email" placeholder="Email">
+				<input type="text" id="phone" name="phone" placeholder="Phone Number">
+					<select name= "doctor" id="doctor">
+					<option value="">--Select Doctor--</option>
+					<option value="general">General Doctor</option>
+					<option value="neurologist">Neurologist</option>
+					<option value="pathologist">Pathologist</option>
+					<option value="pediatrician">Pediatrician</option>
+					<option value="otolaryngologist">Otolaryngologist</option>
+					<option value="cardiologist">Cardiologist</option>
+				</select>
+				<select name= "vigil" id="vigil">
+					<option value="">--Select--</option>
+					<option value="A">Active on-call time (A):the doctor is at
+						the hospital</option>
+					<option value="M">Mixed duty (M):Daily until 21:00 in the
+						health unit after on-call time, weekend-holidays 08: 00-14: 00 in
+						the health unit after on-call time</option>
+					<option value="X">Vigilance on call (X):the doctor is
+						called in case of emergency</option>
+				</select>
+				<button>Create</button>
+			</form>
+			<p class="message">
+				Do you have account?<a href="login.jsp">Log in </a>
+			</p>
+		</div>
+	</div>
+	</p>
+	<script src="../js/showdoctor.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Doctor Program</title>
+		<link href="../styles/covid.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div class="nav-wrapper">
+			<div class="right-side">
+
+				<div class ="nav-link-wrapper">
+					<a  href="../index.jsp" type="home" name="home">home</a>
+				</div>
+				<div class ="nav-link-wrapper">
+					<a  href="#" type="covid" name="covid">covid</a>
+				</div>
+				<div class ="nav-link-wrapper">
+					<a  href="doctorprogram.jsp" type="vigil" name="vigil">Vigil</a>
+				</div>
+				<div class ="nav-link-wrapper">
+					<a  href="../login/login.jsp" type="login" name="login">log in</a>
+				</div>
+			</div>
+		</div>
+		<p>
+			<div class="login-page">
+				<div class="form">
+					<form class="doctor-program-form" action="../Covid" method="POST">
+						<div class="form-group">
+							<h1>COVID REPORT</h1>
+
+
+               				<table id="patient_table">
+               					 <thead>
+								<tr>
+									<th>PATIENT NAME</th>
+									<th>EMAIL</th>
+									<th>PHONE</th>
+									<th>AMKA</th>
+									<th>ADDRESS</th>
+									<th>AGENCY</th>
+
+									<th>DISEASES</th>
+									<th>SYMPTOMS</th>
+									<th>APPOINTMENT</th>
+									<th>ILLNESS</th>
+
+								</tr>
+								 </thead>
+								  <tbody id="body_rows">
+
+  								</tbody>
+						</table>
+
+               			</div>
+					</form>
+				</div>
+			</div>
+		</p>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+            $(document).ready(function(){
+                $.getJSON("covid.json",function(data){
+                    var doctor_data='';
+                    var i=0;
+                    $.each(data[2].data,function(key,value){
+                        doctor_data+='<tr>';
+                        doctor_data+='<td>'+ data[2].data[i].name+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].email+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].phone+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].amka+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].address+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].agency+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].diseases+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].symptoms+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].appointment+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].illness+ '</td>';
+                        doctor_data+='</tr>';
+                        i++;
+                    });
+
+                    $('#patient_table').append(doctor_data);
+                });
+            });
+        </script>
+
+        	</body>
+</html>

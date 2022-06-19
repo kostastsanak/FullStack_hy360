@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Examination</title>
+<link href="../styles/doctorexamination.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body>
+	<div class="nav-wrapper">
+		<p class="profile">
+			<a href="../profile/doctorpage.jsp"> <image height="50"
+					src="../images/person.png" /></a>
+		</p>
+		<div class="right-side">
+			<div class="nav-link-wrapper">
+				<a href="#" type="examination" name="examination">Patient
+					examination</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="doctorvigil.jsp" type="vigil" name="vigil">Vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="../login/login.jsp" type="logout" name="logout">log out</a>
+			</div>
+		</div>
+	</div>
+	<p>
+	<div class="login-page">
+		<div class="form">
+			<form class="doctor-program-form" action="../PatientExam" method="POST">
+
+				<h4>Patient Examination</h4>
+				<select name="patient" id="patient_examination">
+				</select> <select name="illness" id="illness_table">
+
+				</select> <select name="drugs" id="drugs_select">
+				</select>
+				<h5>Re-Examination</h5>
+				<div class="form-group">
+					<label for="yes" onclick="show_hide()" class="radio-inline"><input
+						type="radio" value="yes" name="re-examination" id="yes" />Yes </label> <label
+						for="no" onclick="show_hide2()" class="radio-inline"><input
+						type="radio" value="no" name="re-examination" id="no" />No </label>
+				</div>
+				<div id="re-exam">
+					<select name="examination" id="examination">
+						<option value="">--Examination--</option>
+						<option value="X-rays">X-rays</option>
+						<option value="Blood Test">Blood Test</option>
+						<option value="Covid Test">Covid Test</option>
+					</select> <select name="doctor" id="doctor_select">
+
+					</select>
+					<div class="date">
+						<select name="day" id="day">
+							<option value="">--Day--</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+						</select> <select name="month" id="month">
+							<option value="">--Month--</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select> <select name="time" id="time">
+							<option value="">--Time--</option>
+							<option value="8">8:00</option>
+							<option value="9">9:00</option>
+							<option value="10">10:00</option>
+							<option value="11">11:00</option>
+							<option value="12">12:00</option>
+							<option value="13">13:00</option>
+							<option value="14">14:00</option>
+							<option value="15">15:00</option>
+							<option value="16">16:00</option>
+							<option value="17">17:00</option>
+							<option value="18">18:00</option>
+							<option value="19">19:00</option>
+							<option value="20">20:00</option>
+						</select>
+					</div>
+				</div>
+				<button>enter</button>
+			</form>
+		</div>
+	</div>
+	</p>
+	<script>
+			var doc=0;
+			document.getElementById("re-exam").style.display="none";
+			function show_hide(){
+				if(doc==0){
+					document.getElementById("re-exam").style.display="inline";
+					return doc=1;
+				}
+			}
+			function show_hide2(){
+				if(doc==1){
+					document.getElementById("re-exam").style.display="none";
+					return doc=0;
+				}else{
+					return;
+				}
+			}
+		</script>
+		<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.3.1.js"></script>
+       <script type="text/javascript">
+		var $select = $('#patient_examination');
+		$.getJSON("patient.json", function(data) {
+			$select.html('');
+			$select.append('<option id=""> --Choose patient with AMKA--</option>')
+			for (var i = 0; i < data[2].data.length; i++) {
+				$select.append('<option id="'+data[2].data[i].amka+ '">'
+						+ data[2].data[i].amka + '</option>')
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		var $select1 = $('#drugs_select');
+		$.getJSON("drugs.json", function(data) {
+			$select1.html('');
+			$select1.append('<option id=""> --Choose Drugs--</option>')
+			for (var i = 0; i < data[2].data.length; i++) {
+				$select1.append('<option id="'+data[2].data[i].name+ '">'
+						+ data[2].data[i].name +',' + data[2].data[i].Dquantity +', Used For: '+data[2].data[i].usedfor+'</option>')
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		var $select2 = $('#doctor_select');
+		$.getJSON("doctorOnDuty2.json", function(data) {
+			$select2.html('');
+			$select2.append('<option id=""> --Make an appointment with--</option>')
+			for (var i = 0; i < data[2].data.length; i++) {
+				$select2.append('<option id="'+data[2].data[i].name+ '"> Name : '
+						+ data[2].data[i].name +' Speciality : '+ data[2].data[i].speciality+'</option>')
+			}
+		});
+	</script>
+	<script type="text/javascript">
+		var $select3 = $('#illness_table');
+		$.getJSON("conditions.json", function(data) {
+			$select3.html('');
+			$select3.append('<option id=""> --Illness--</option>')
+			for (var i = 0; i < data[2].data.length; i++) {
+				$select3.append('<option id="'+data[2].data[i].condition+ '">'+data[2].data[i].condition+'</option>')
+			}
+		});
+	</script>
+</body>
+</html>

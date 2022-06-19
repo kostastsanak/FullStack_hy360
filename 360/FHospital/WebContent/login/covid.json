@@ -1,0 +1,74 @@
+[
+{
+    "type": "header",
+    "version": "5.0.4",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+},
+{
+    "type": "database",
+    "name": "test"
+},
+{
+    "type": "table",
+    "name": "covid",
+    "database": "test",
+    "data": 
+[
+{
+    "name": "p",
+    "password": "p",
+    "email": "p",
+    "phone": "p",
+    "amka": "p",
+    "address": "p",
+    "agency": "p",
+    "diseases": "pp",
+    "LastLoggedIn": "15-01-2021 02:51:34",
+    "symptoms": "yo",
+    "appointment": "Name : d Speciality : otolaryngologist",
+    "day": "14",
+    "month": "2",
+    "time": "12",
+    "illness": "Covid",
+    "drugs": "salospear,150, Used For: strong, pain restriction"
+},
+{
+    "name": "p",
+    "password": "p",
+    "email": "p",
+    "phone": "p",
+    "amka": "p",
+    "address": "p",
+    "agency": "p",
+    "diseases": "pp",
+    "LastLoggedIn": "15-01-2021 02:51:34",
+    "symptoms": "yo",
+    "appointment": "Name : d Speciality : otolaryngologist",
+    "day": "14",
+    "month": "2",
+    "time": "12",
+    "illness": "Covid",
+    "drugs": "salospear,150, Used For: strong, pain restriction"
+},
+{
+    "name": "p",
+    "password": "p",
+    "email": "p",
+    "phone": "p",
+    "amka": "p",
+    "address": "p",
+    "agency": "p",
+    "diseases": "pp",
+    "LastLoggedIn": "15-01-2021 02:51:34",
+    "symptoms": "yo",
+    "appointment": "Name : d Speciality : otolaryngologist",
+    "day": "14",
+    "month": "2",
+    "time": "12",
+    "illness": "Covid",
+    "drugs": "salospear,150, Used For: strong, pain restriction"
+}
+]
+
+}
+]

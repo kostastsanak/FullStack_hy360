@@ -1,0 +1,76 @@
+[
+{
+    "type": "header",
+    "version": "5.0.4",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+},
+{
+    "type": "database",
+    "name": "test"
+},
+{
+    "type": "table",
+    "name": "drugs",
+    "database": "test",
+    "data": 
+[
+{
+    "name": "Depon",
+    "type": "pill",
+    "Dquantity": "500g",
+    "usedfor": "pain restriction",
+    "Dleft": "149"
+},
+{
+    "name": "contrexcold",
+    "type": "pill",
+    "Dquantity": "150g",
+    "usedfor": "Running nose, headache",
+    "Dleft": "58"
+},
+{
+    "name": "Algofren",
+    "type": "600g",
+    "Dquantity": "pill",
+    "usedfor": "analgestic, antipyretic, anti-infammatory",
+    "Dleft": "33"
+},
+{
+    "name": "Celestoderm-V",
+    "type": "cream",
+    "Dquantity": "30",
+    "usedfor": "skin problems",
+    "Dleft": "36"
+},
+{
+    "name": "Atarax",
+    "type": "drinkable",
+    "Dquantity": "150g",
+    "usedfor": "allergies",
+    "Dleft": "39"
+},
+{
+    "name": "Vomex",
+    "type": "drinkable",
+    "Dquantity": "16,5mg",
+    "usedfor": "prevent vomit",
+    "Dleft": "23"
+},
+{
+    "name": "salospear",
+    "type": "pill",
+    "Dquantity": "150",
+    "usedfor": "strong, pain restriction",
+    "Dleft": "16"
+},
+{
+    "name": "T4-66",
+    "type": "pill",
+    "Dquantity": "150g",
+    "usedfor": "hormologic",
+    "Dleft": "34"
+}
+]
+
+}
+]

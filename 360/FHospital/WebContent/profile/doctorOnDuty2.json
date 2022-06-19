@@ -1,0 +1,44 @@
+[
+{
+    "type": "header",
+    "version": "5.0.4",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+},
+{
+    "type": "database",
+    "name": "test"
+},
+{
+    "type": "table",
+    "name": "doctor",
+    "database": "test",
+    "data": 
+[
+{
+    "name": "d",
+    "password": "d",
+    "speciality": "general",
+    "email": "d@hotmail.com",
+    "phone": "6879899659",
+    "vigil": "A"
+},
+{
+    "name": "doc",
+    "password": "doc",
+    "speciality": "pediatrician",
+    "email": "doc@hotmail.com",
+    "phone": "6977854646",
+    "vigil": "X"
+},
+{
+    "name": "doctor",
+    "password": "doctor",
+    "speciality": "cardiologist",
+    "email": "doctor@hotmail.com",
+    "phone": "6979843964",
+    "vigil": "M"
+}
+]
+
+}
+]

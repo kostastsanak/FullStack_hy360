@@ -1,0 +1,44 @@
+[
+{
+    "type": "header",
+    "version": "5.0.4",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+},
+{
+    "type": "database",
+    "name": "test"
+},
+{
+    "type": "table",
+    "name": "conditions",
+    "database": "test",
+    "data": 
+[
+{
+    "condition": "kakwseis myoskeletikou susthmatos"
+},
+{
+    "condition": "ponokefalos"
+},
+{
+    "condition": "griph"
+},
+{
+    "condition": "iwsh"
+},
+{
+    "condition": "Covid"
+},
+{
+    "condition": "Gastraderitida"
+},
+{
+    "condition": "amugdalitida"
+},
+{
+    "condition": "sth8agx8h"
+}
+]
+
+}
+]

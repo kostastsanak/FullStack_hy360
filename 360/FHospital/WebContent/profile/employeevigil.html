@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Doctor Program</title>
+<link href="../styles/doctorvigil.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="nav-wrapper">
+		<p class="profile">
+			<a href="../profile/employeepage.jsp"> <image height="50"
+					src="../images/person.png" /></a>
+		</p>
+		<div class="right-side">
+			<div class="nav-link-wrapper">
+				<a href="employeechange.jsp" type="changevigil" name="changevigil">Change Vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="#" type="vigil" name="vigil">vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="../login/login.jsp" type="logout" name="logout">log out</a>
+			</div>
+		</div>
+	</div>
+	<p>
+	<div class="login-page">
+		<div class="form">
+			<form class="doctor-program-form" action="#" method="POST">
+				<div class="form-group">
+					<h1>DOCTOR PROGRAM</h1>
+
+					<table id="doctor_table">
+						<thead>
+							<tr>
+								<th>DOCTOR NAME</th>
+								<th>SPECIALITY</th>
+								<th>TYPE</th>
+							</tr>
+						</thead>
+						<tbody id="body_rows">
+
+						</tbody>
+					</table>
+					<h4>Active on-call time (A):the doctor is at the hospital</h4>
+					<h4>Mixed duty (M):Daily until 21:00 in the health unit after
+						on-call time, weekend-holidays 08: 00-14: 00 in the health unit
+						after on-call time</h4>
+					<h4>Vigilance on call (X):the doctor is called in case of
+						emergency</h4>
+				</div>
+			</form>
+		</div>
+	</div>
+	</p>
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+            $(document).ready(function(){
+                $.getJSON("doctorOnDuty2.json",function(data){
+                    var doctor_data='';
+                    var i=0;
+                    $.each(data[2].data,function(key,value){
+                        doctor_data+='<tr>';
+                        doctor_data+='<td>'+ data[2].data[i].name+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].speciality+ '</td>';
+                        doctor_data+='<td>'+ data[2].data[i].vigil+ '</td>';
+                        doctor_data+='</tr>';
+                        i++;
+                    });
+
+                    $('#doctor_table').append(doctor_data);
+                });
+            });
+        </script>
+</body>
+</html>

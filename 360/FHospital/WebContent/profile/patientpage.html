@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Patient</title>
+<link href="../styles/patientpage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="nav-wrapper">
+		<p class="message profile">
+			<a href="#"> <image height="50" src="../images/person.png" /></a>
+		</p>
+		<div class="right-side">
+			<div class="nav-link-wrapper">
+				<a href="patientvigil.jsp" type="vigil" name="vigil">vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="../login/login.jsp" type="logout" name="logout">log out</a>
+			</div>
+		</div>
+	</div>
+	<p>
+	<div class="login-page">
+		<div class="form">
+			<form class="home-form" action="../UpdatePatientInfo" method="POST">
+				<div class="form-group">
+					<h3>Make an Appointment</h3>
+					<input type="text" name="symptoms" placeholder="Enter your Symptoms">
+
+						<select name="doctorappointment" id="doctor_choose">
+
+					</select>
+					<div class="date">
+						<select name="day" id="day">
+							<option value="">--Day--</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+						</select> <select name="month" id="month">
+							<option value="">--Month--</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select> <select name="time" id="time">
+							<option value="">--Time--</option>
+							<option value="8">8:00</option>
+							<option value="9">9:00</option>
+							<option value="10">10:00</option>
+							<option value="11">11:00</option>
+							<option value="12">12:00</option>
+							<option value="13">13:00</option>
+							<option value="14">14:00</option>
+							<option value="15">15:00</option>
+							<option value="16">16:00</option>
+							<option value="17">17:00</option>
+							<option value="18">18:00</option>
+							<option value="19">19:00</option>
+							<option value="20">20:00</option>
+						</select>
+					</div>
+					<button>ENTER</button>
+				</div>
+			</form>
+			<form class="profile-form" action="../UpdatePatientInfo"
+				method="POST">
+				<div class="form-group">
+					<table>
+						<tr>
+							<td>Fullname: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show1()">Change</button>
+							</td>
+						</tr>
+						<tr id="txt1">
+							<td><input type="text" name="change_name"
+								placeholder="Enter new Fullname"></td>
+							<td>
+								<button>enter</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Password: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show2()">Change</button>
+							</td>
+
+						</tr>
+						<tr id="txt2">
+							<td><input class="txt" type="password"
+								name="change_password" placeholder="Enter new Password">
+							</td>
+							<td><button>enter</button></td>
+						</tr>
+
+						<tr>
+							<td>Email: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show3()">Change</button>
+							</td>
+						<tr id="txt3">
+							<td><input class="txt" type="text" name="change_email"
+								placeholder="Enter new Email"></td>
+							<td><button>enter</button></td>
+						</tr>
+
+						</tr>
+						<tr>
+							<td>Phone Number: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show4()">Change</button>
+							</td>
+						<tr id="txt4">
+							<td><input type="text" name="change_phone"
+								placeholder="Enter new Phone Number"></td>
+							<td><button>enter</button></td>
+						</tr>
+						<tr>
+							<td>AMKA: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show5()">Change</button>
+							</td>
+						<tr id="txt5">
+
+							<td><input class="txt" type="text" name="change_amka"
+								placeholder="Enter new AMKA"></td>
+							<td><button>enter</button></td>
+						</tr>
+						</tr>
+						<tr>
+							<td>Address: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show6()">Change</button>
+							</td>
+						<tr id="txt6">
+
+							<td><input class="txt" type="text" name="change_address"
+								placeholder="Enter new Address"></td>
+							<td><button>enter</button></td>
+						</tr>
+
+						</tr>
+						<tr>
+							<td>Agency: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show7()">Change</button>
+							</td>
+						<tr id="txt7">
+							<td><input class="txt" type="text" name="change_agency"
+								placeholder="Enter new Agency"></td>
+							<td><button>enter</button></td>
+						</tr>
+
+						</tr>
+						<tr>
+							<td>Diseases: XXXXXXXXXXX</td>
+							<td>
+								<button type="button" onclick="show8()">Change</button>
+							</td>
+						<tr id="txt8">
+							<td><input class="txt" type="text" name="change_diseases"
+								placeholder="Enter new diseases"></td>
+							<td><button>enter</button></td>
+						</tr>
+
+						</tr>
+					</table>
+				</div>
+				<p class="message">
+					If you dont want change something <a href="#"> RETURN </a>
+				</p>
+			</form>
+		</div>
+	</div>
+	</p>
+	<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+	<script>
+			$('.message a').click(function(){
+				$('form').animate({height:"toggle",opacity: "toggle"},"slow");
+			});
+		</script>
+	<script src="../js/changeprofilepatient.js"></script>
+	<script type="text/javascript">
+		var $select = $('#doctor_choose');
+		$.getJSON("doctorOnDuty2.json", function(data) {
+			$select.html('');
+			$select.append('<option id=""> --Make An Appointment With--</option>')
+			for (var i = 0; i < data[2].data.length; i++) {
+				$select.append('<option id="'+data[2].data[i].name+ '">'
+						+ data[2].data[i].speciality+'  '+data[2].data[i].name + '</option>')
+			}
+		});
+	</script>
+</body>
+</html>

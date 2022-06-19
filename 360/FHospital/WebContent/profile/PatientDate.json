@@ -1,0 +1,77 @@
+[
+{
+    "type": "header",
+    "version": "5.0.4",
+    "comment": "Export to JSON plugin for PHPMyAdmin"
+},
+{
+    "type": "database",
+    "name": "test"
+},
+{
+    "type": "table",
+    "name": "patient",
+    "database": "test",
+    "data": 
+[
+{
+    "name": "p",
+    "password": "p",
+    "email": "p@hotmail.com",
+    "phone": "69789546558",
+    "amka": "20000565498",
+    "address": "Loutsa",
+    "agency": "200065465465",
+    "diseases": "none",
+    "LastLoggedIn": "16-01-2021 05:44:46",
+    "symptoms": null,
+    "appointment": null,
+    "day": null,
+    "month": null,
+    "time": null,
+    "illness": null,
+    "drugs": null,
+    "examinations": null
+},
+{
+    "name": "patient",
+    "password": "patient",
+    "email": "patient@hotmail.com",
+    "phone": "697495654989",
+    "amka": "23656589989",
+    "address": "3 marathonos",
+    "agency": "6549898746346",
+    "diseases": "cold",
+    "LastLoggedIn": "16-01-2021 05:46:06",
+    "symptoms": null,
+    "appointment": null,
+    "day": null,
+    "month": null,
+    "time": null,
+    "illness": null,
+    "drugs": null,
+    "examinations": null
+},
+{
+    "name": "kostas",
+    "password": "kostas",
+    "email": "kostas@hotmail.com",
+    "phone": "69087846565",
+    "amka": "200011630527",
+    "address": "Hrakleio",
+    "agency": "200001166856",
+    "diseases": "vision decrease",
+    "LastLoggedIn": "16-01-2021 05:47:12",
+    "symptoms": null,
+    "appointment": null,
+    "day": null,
+    "month": null,
+    "time": null,
+    "illness": null,
+    "drugs": null,
+    "examinations": null
+}
+]
+
+}
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Examination</title>
+<link href="../styles/nurseexamination.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body>
+	<div class="nav-wrapper">
+		<p class="profile">
+			<a href="../profile/nursepage.jsp"> <image height="50"
+					src="../images/person.png" /></a>
+		</p>
+		<div class="right-side">
+			<div class="nav-link-wrapper">
+				<a href="#" type="examination" name="examination">patient
+					examination</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="nursevigil.jsp" type="vigil" name="vigil">Vigil</a>
+			</div>
+			<div class="nav-link-wrapper">
+				<a href="../login/login.jsp" type="logout" name="logout">log out</a>
+			</div>
+		</div>
+	</div>
+	<p>
+	<div class="login-page">
+		<div class="form">
+			<form class="doctor-program-form" action="../NurseExamination" method="POST">
+
+				<h4>Patient Examination</h4>
+				<select name="patient" id="patient_change">
+				</select> <select name="examination" id="examination">
+					<option value="">--Examination--</option>
+					<option value="X-rays">X-rays</option>
+					<option value="Blood Test">Blood Test</option>
+					<option value="Covid Test">Covid Test</option>
+				</select>
+				<h4>Complete Examination</h4>
+				<div class="form-group">
+					<label for="yes" class="radio-inline"><input type="radio"
+						value="yes" name="re_examination" id="yes" />Yes </label> <label for="no"
+						class="radio-inline"><input type="radio" value="no"
+						name="re_examination" id="no" />No </label>
+				</div>
+				<button>enter</button>
+			</form>
+		</div>
+	</div>
+	</p>
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.3.1.js"></script>
+       <script type="text/javascript">
+		var $select = $('#patient_change');
+		$.getJSON("patient.json", function(data) {
+			$select.html('');
+			$select.append('<option id=""> --Choose patient with AMKA--</option>')
+			for (var i = 0; i < data[2].data.length; i++) {
+				$select.append('<option id="'+data[2].data[i].amka+ '">'
+						+ data[2].data[i].amka +'</option>')
+			}
+		});
+	</script>
+</body>
+</html>
